@@ -1,6 +1,7 @@
 # Label Studio and ngrok integration
 
 Author: Mariana Chaves
+
 Last update: February 21st, 2024
 - [Label Studio and ngrok integration](#label-studio-and-ngrok-integration)
   - [**Description**](#description)
