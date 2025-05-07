@@ -152,19 +152,15 @@ The next time that you need to make your projects available to your collaborator
 
 **Advantages**
 
-**Easy access for collaborators:** People accessing your Label Studio project just require the URL and a Label Studio account. They do not need to install Label Studio.
-
-**Remote Annotation:** Allows collaborators to work on your project from anywhere with an internet connection.
-
-**No Public Server Needed:** Avoids the need for setting up and maintaining a dedicated public server.
+- **Easy access for collaborators:** People accessing your Label Studio project just require the URL and a Label Studio account. They do not need to install Label Studio.
+- **Remote Annotation:** Allows collaborators to work on your project from anywhere with an internet connection.
+- **No Public Server Needed:** Avoids the need for setting up and maintaining a dedicated public server.
 
 **Disadvantages:**
 
-**Security:** Exposing your local network requires caution. Use trusted environments.
-
-**Performance:** Performance might be impacted depending on your internet connection and network traffic.
-
-**Dependent on your local machine:** Since the Label Studio project is running on your machine, you must keep your machine on and connected to the internet.
+- **Security:** Exposing your local network requires caution. Use trusted environments.
+- **Performance:** Performance might be impacted depending on your internet connection and network traffic.
+- **Dependent on your local machine:** Since the Label Studio project is running on your machine, you must keep your machine on and connected to the internet.
 
 ## **More info**
 
