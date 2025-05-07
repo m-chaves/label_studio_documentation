@@ -1,0 +1,49 @@
+<!-- Author: Mariana Chaves -->
+
+<View>
+
+  <style>
+    /* Make label container float on top */
+    .lsf-labels {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        z-index: 1000;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Change fill color for  relation text box */
+    .relations-overlay rect[fill="#a0a"] {
+    fill: gray; /* Change background to gray */
+    }
+
+    /* Change fill color for relation arrow */
+    .relations-overlay path[stroke="#fa541c"] {
+    stroke: gray; /* Change arrow stroke to gray */
+    }
+
+    /* Change arrowhead marker fill to gray */
+    .relations-overlay marker path[fill="#fa541c"] {
+    fill: gray; /* Change arrowhead to gray */
+    }
+
+    .lsf-richtext__container, .lsf-richtext__line {
+        font-size: 20px !important;      /* Force larger font size */
+        line-height: 2.5 !important;     /* Increase line spacing */
+    }
+
+    </style>
+
+   <Relations choice="single">
+    <Relation value="support" background="green"/>
+    <Relation value="attack" background="red"/>
+  </Relations>
+  <Labels name="label" toName="text" choice="single" showInline="true">
+    <Label value="Claim" background="blue"/>
+    <Label value="Premise" background="orange"/>
+  </Labels>
+
+  <Text name="empty" value=""/>
+  <Text name="text" value="$content" showLabels="true"/>
+</View>
