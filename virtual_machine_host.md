@@ -242,6 +242,8 @@ You can try to create a new project and upload data directly. However, uploading
 
 ### Method 1: Use the Label Studio port explicitly
 
+In your local machine, connect to the same network of your VM. For instance, if you are using a I3S VM then connect to the I3S VPN.
+
 In your browser, instead of using just the hostname (e.g. `example.i3s.unice.fr`), use the port explicitly (e.g. `example.i3s.unice.fr:8080`). Now use Label Studio as you would on your local machine.
 
 > Note: Remember that port `8080` is the default port for Label Studio. If you changed it, use the new port instead.
