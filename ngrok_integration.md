@@ -2,7 +2,7 @@
 
 Author: Mariana Chaves
 
-Last update: February 21st, 2024
+Last update: June 12th, 2025
 - [Label Studio and ngrok integration](#label-studio-and-ngrok-integration)
   - [**Description**](#description)
   - [**Install ngrok**](#install-ngrok)
@@ -70,7 +70,7 @@ ngrok config add-authtoken <Your token>
 
 If you don't have a static domain, the link to access your Label Studio project will change every time that you start a tunnel with ngrok.  If you want the link to stay the same, you can get a static domain.
 
-Go to your Ngrok dashboard (Access it [here](https://dashboard.ngrok.com/get-started/setup)). \> Cloud Edge \> Domains \> New Domain
+Go to your Ngrok dashboard (Access it [here](https://dashboard.ngrok.com/get-started/setup)). \> Domains \> New Domain
 
 ![](img/ngrok_integration/image4.png)
 
@@ -122,6 +122,25 @@ Start Label- Studio using the Forwarding URL
 
 ```bash
 LABEL_STUDIO_HOST=<Forwarding URL or static domain> label-studio start
+```
+
+It might the case that Label Studio does not "trust" your domain. If this happens, you will see an error message in your terminal like this one:
+```bash
+[WARNING] Forbidden (Origin checking failed
+```
+And/or you won't be able to login to your Label Studio instance and you will see an error like this:
+
+![](img/ngrok_integration/CSRF_error.png)
+
+To fix this, you need to tell Label Studio (Django) to trust your ngrok domain. You can do this by setting the CSRF_TRUSTED_ORIGINS environment variable.
+
+```bash
+CSRF_TRUSTED_ORIGINS=<Forwarding URL or static domain> LABEL_STUDIO_HOST=<Forwarding URL or static domain> label-studio start
+```
+
+For example
+```bash
+ CSRF_TRUSTED_ORIGINS=https://finch-precious-quetzal.ngrok-free.app LABEL_STUDIO_HOST=https://finch-precious-quetzal.ngrok-free.app label-studio start
 ```
 
 Keep this terminal open too.
